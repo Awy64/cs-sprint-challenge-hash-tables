@@ -3,6 +3,18 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    amount = len(arrays)
+    total = dict()
+    result = []
+    for i in arrays:
+      for a in i:
+        if a in total:
+          total[a] += 1
+        else:
+          total[a] = 1
+    for i in total:
+      if total[i] == amount:
+        result.append(i)
 
     return result
 
